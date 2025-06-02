@@ -1,6 +1,11 @@
 import { IPTVServer, Movie, ExportData } from "@/types";
 import { XtreamClient } from "./xtream-client";
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 /**
  * Creates a new XtreamClient instance for a server
  */
